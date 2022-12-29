@@ -1,0 +1,33 @@
+@startuml DiagramClassHotel
+
+class Admin {
+ -id : bighit
+ +nama : string
+ +username : string
+ +password : sting
+ +role : enum
+ +rememberToken()
+ +timestamps()
+}
+
+class Kamar{
+  -id : bighit
+  +nama_jeniskamar : string
+  +jumlah_kamar : int
+  +harga_kamar : int
+  +timestamps()
+}
+
+class Pemesanan{
+  -id : bigint
+  +kamar_id : bigint
+  +tgl_checkin : date
+  +tgl_checkout : date
+  +jenis_kamar : enum
+  +jumlah_kamar_dipesan : int
+  +nama_pemesan : string
+  +no_hp : string
+  +status : enum 
+  +timestamps()
+}
+@enduml
